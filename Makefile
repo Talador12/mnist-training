@@ -44,12 +44,17 @@ endif
 
 ## make activate - creates virtual environment and installs dependencies
 install:
-	python3 -m venv ./venv
+	pip3 install -i https://pypi.org/simple --upgrade virtualenv==20.0.28
+	virtualenv --python=/usr/local/bin/python3.8 venv
 	$(VENV)pip3 install -i https://pypi.org/simple --upgrade pip
 	$(VENV)pip3 install -i https://pypi.org/simple --upgrade -r requirements.txt
 
 ## make clean - cleans up the repo
 clean:
 	rm -rf venv
-	rm pyvenv.cfg
+	rm pyvenv.cfg || true
 	find -iname "*.pyc" -delete
+
+## make tfnn - trains a tensorflow neural net on the mnist dataset
+tfnn:
+	$(VENV)python3 training/tfnn.py

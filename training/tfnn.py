@@ -26,7 +26,7 @@ def get_data():
     ) = mnist.load_data()
     data = {
         'train_data': train_images_2d.rehsape(train_images_2d.shape[0], 784).astype('float32') / 255,
-        'train_labels': tf.keras.utils.to_categorical(train_labels_n, 10)
+        'train_labels': tf.keras.utils.to_categorical(train_labels_n, 10),
         'test_data': test_images_2d.reshape(test_images_2d.shape[0], 784).astype('float32') / 255,
         'test_labels': tf.keras.utils.to_categorical(test_labels_n, 10)
     }
@@ -123,9 +123,9 @@ def train_model(train_data, train_labels, test_data, test_labels):
             (x_batch, y_batch) = next_batch(100, train_data, train_labels)
             sess.run(optimizer, feed_dict={input_images: x_batch, target_labels: y_batch})
             # Access accuracy each 100 epochs
-            if(x % 100=0):
+            if(x % 100):
                 print(f'Training epoch {x+1}')
-                print(f'Accuracy: {sess.run(accuracy, feed_dict={input_images: test_data, target_labels: test_labels})}'))
+                print(f'Accuracy: {sess.run(accuracy, feed_dict={input_images: test_data, target_labels: test_labels})}')
 
 
 def export_model(train_data, train_labels):

@@ -1,7 +1,9 @@
+bpython==0.19
 koalas==1.1.0
+mlflow==1.10.0
 numpy==1.18.5
 pandas==0.24.2
 pyspark==3.0.0
 scipy==1.4.1
-wheel==0.34.2
+tensorflow==2.3.0
 xgboost==1.1.1
