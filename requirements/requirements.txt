@@ -1,4 +1,4 @@
-bpython==0.19
+Cython==0.29.21
 koalas==1.1.0
 mlflow==1.10.0
 numpy==1.18.5

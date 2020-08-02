@@ -1,0 +1,4 @@
+-r requirements.txt
+black==19.10b0
+bpython==0.19
+pre-commit==2.6.0
