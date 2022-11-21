@@ -5,5 +5,5 @@ numpy==1.22.0
 pandas==0.24.2
 pyspark==3.2.2
 scipy==1.4.1
-tensorflow==2.7.2
+tensorflow==2.9.3
 xgboost==1.1.1
