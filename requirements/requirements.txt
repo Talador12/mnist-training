@@ -1,6 +1,6 @@
 Cython==0.29.21
 koalas==1.1.0
-mlflow==1.23.1
+mlflow==2.2.1
 numpy==1.22.0
 pandas==0.24.2
 pyspark==3.2.2
